@@ -140,3 +140,27 @@ header {
   border: 1px solid var(--divisory-line);
   width: 300px;
 }
+/* =============================================================================================== */
+/* Catálogo  */
+.catalogo_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20px;
+  border: 1px solid var(--divisory-line);
+  background-color: var(--body-bgc-darker);
+  padding: 20px 40px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+  width: 100%;
+}
+.catalogo_container h3 {
+  width: 300px;
+}
+.catalogo_container img {
+  width: 300px;
+  height: 30vh;
+}
+.catalogo_right {
+  margin-left: 30px;
+  width: 300px;
+}
