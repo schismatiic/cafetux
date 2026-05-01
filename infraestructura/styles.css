@@ -82,19 +82,31 @@ header {
   list-style: none;
 }
 
-#navbar a {
+#navbar button {
   color: var(--clear-color);
   background-color: var(--red-color);
   padding: 6px 20px;
-  width: 30%;
   font-size: 14px;
   margin: 0 8px;
   border: 1px solid var(--divisory-line);
 }
-#navbar a:hover {
+#navbar button:hover {
   transform: scale(0.95);
   background-color: var(--red-clear-color);
 }
-#navbar a:active {
+#navbar button:active {
   transform: scale(0.85);
+}
+
+#tux {
+  cursor: pointer;
+}
+/* =============================================================================================== */
+/* Content  */
+#titulo__pagina {
+  margin-top: 20px;
+  border: 1px solid var(--divisory-line);
+  background-color: var(--body-bgc-darker);
+  padding: 6px 40px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
