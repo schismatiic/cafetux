@@ -149,12 +149,14 @@ header {
   margin-top: 20px;
   border: 1px solid var(--divisory-line);
   background-color: var(--body-bgc-darker);
-  padding: 20px 40px;
+  padding: 20px;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
   width: 100%;
 }
 .catalogo_container h3 {
   width: 300px;
+  border-bottom: 1px solid var(--divisory-line);
+  padding-bottom: 4px;
 }
 .catalogo_container img {
   width: 300px;
@@ -163,4 +165,22 @@ header {
 .catalogo_right {
   margin-left: 30px;
   width: 300px;
+}
+.catalogo_right p {
+  margin-top: 10px;
+}
+.boton_comprar {
+  color: var(--clear-color);
+  background-color: var(--red-color);
+  padding: 6px 20px;
+  font-size: 14px;
+  margin: 10px 0;
+  border: 1px solid var(--divisory-line);
+}
+.boton_comprar:hover {
+  transform: scale(0.95);
+  background-color: var(--red-clear-color);
+}
+.boton_comprar:active {
+  transform: scale(0.85);
 }

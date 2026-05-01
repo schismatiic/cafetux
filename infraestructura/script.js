@@ -15,42 +15,42 @@ const cafeteras = [
     nombre: "Bialetti Moka Express",
     descripcion:
       "La clásica de los verdaderos capos del café, ragazzo. Una cafetera italiana que prepara un espresso intenso, elegante y con aroma que despierta hasta al más dormido.",
-    src: "https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?q=80&w=1200&auto=format&fit=crop",
+    src: "https://www.bialetti.co.nz/cdn/shop/products/5322s.jpg?v=1503972578",
   },
 
   {
     nombre: "Saeco A-50",
     descripcion:
       "La favorita del jefe Momo. Automática, poderosa y perfecta para quienes quieren café premium sin perder tiempo. Aprietas un botón y mamma mia… qué belleza.",
-    src: "https://images.unsplash.com/photo-1521302080334-4bebac2763a6?q=80&w=1200&auto=format&fit=crop",
+    src: "https://flatnwhite.com/wp-content/uploads/2023/04/SE-50_trequarti.jpg",
   },
 
   {
     nombre: "Nespresso Vertuo",
     descripcion:
       "Pequeña pero peligrosa, como un italiano manejando en Roma. Ideal para cápsulas rápidas con sabor elegante y espuma cremosa.",
-    src: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1200&auto=format&fit=crop",
+    src: "https://m.media-amazon.com/images/I/31T6my99pML._AC_US1000_.jpg",
   },
 
   {
-    nombre: "Prensa Francesa Barista",
+    nombre: "Prensa Francesa Bialetti",
     descripcion:
       "Para los artistas del café, capisce? Una extracción suave, intensa y perfecta para disfrutar una mañana tranquila mirando la lluvia con jazz italiano.",
-    src: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1200&auto=format&fit=crop",
+    src: "https://paramicafe.cl/wp-content/uploads/2022/11/Prensa-Francesa-1-L-Bialetti-Preziosa.webp",
   },
 
   {
-    nombre: "Promo Famiglia x4",
+    nombre: "Promo 4 Cafeteras",
     descripcion:
       "Cuatro cafeteras para toda la famiglia. Porque en Italia el café no se toma solo, se comparte con la nonna, el primo y todo el barrio.",
-    src: "https://images.unsplash.com/photo-1445116572660-236099ec97a0?q=80&w=1200&auto=format&fit=crop",
+    src: "https://resources.claroshop.com/medios-plazavip/mkt/5e693e81c517b_prensafrancesa_cafetera_4piezas_drinklabppf350ngjpg.jpg",
   },
 
   {
     nombre: "Pack Italiano 4 Cafeteras + 2 Propiedades",
     descripcion:
-      "Una promo criminalmente buena, ragazzo. Cuatro cafeteras seleccionadas por el propio Momo para convertir cualquier cocina en una cafetería italiana de lujo.",
-    src: "https://images.unsplash.com/photo-1459755486867-b55449bb39ff?q=80&w=1200&auto=format&fit=crop",
+      "Una promo criminalmente buena, ragazzo. Incluye cuatro cafeteras seleccionadas por el propio Momo y 2 propiedades en Sicilia, perfectas para vivir tomando café frente al mar como un auténtico padrino italiano.",
+    src: "https://i.ytimg.com/vi/JuAuT12vSgU/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBG_0X1t1Ew5iSQTcemeRS1GUsTCw",
   },
 ];
 //   ===============================================================================================
@@ -86,21 +86,31 @@ const renderCatalogo = () => {
     const catalogo_img = document.createElement("img");
     const catalogo_h3 = document.createElement("h3");
     const catalogo_p = document.createElement("p");
+    const boton_comprar = document.createElement("button");
     //   ===============================================================================================
     //   Classname and styles
     catalogo_container.className = "catalogo_container";
     right.className = "catalogo_right";
+    boton_comprar.className = "boton_comprar";
     //   ===============================================================================================
     //   Text content / src
     catalogo_h3.textContent = cafetera.nombre;
     catalogo_p.textContent = cafetera.descripcion;
+    boton_comprar.textContent = "Comprar";
     catalogo_img.src = cafetera.src;
     left.appendChild(catalogo_img);
     right.appendChild(catalogo_h3);
     right.appendChild(catalogo_p);
+    right.appendChild(boton_comprar);
     catalogo_container.appendChild(left);
     catalogo_container.appendChild(right);
     content.appendChild(catalogo_container);
+    //   ===============================================================================================
+    //   Listener
+    boton_comprar.addEventListener("click", () => {
+      catalogo_img.src =
+        "https://media.tenor.com/BPSfyjEKq-0AAAAM/momo-bailando.gif";
+    });
   });
 };
 //   ===============================================================================================
