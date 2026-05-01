@@ -103,10 +103,40 @@ header {
 }
 /* =============================================================================================== */
 /* Content  */
+#content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 #titulo__pagina {
   margin-top: 20px;
   border: 1px solid var(--divisory-line);
   background-color: var(--body-bgc-darker);
   padding: 6px 40px;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+/* =============================================================================================== */
+/* Inicio  */
+.inicio_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  border: 1px solid var(--divisory-line);
+  background-color: var(--body-bgc-darker);
+  padding: 20px 40px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+  width: 100%;
+}
+.inicio_container img {
+  width: 300px;
+  margin: 20px 0;
+}
+.inicio_container p {
+  background-color: var(--body-bgc);
+  padding: 10px;
+  border: 1px solid var(--divisory-line);
+  width: 300px;
 }
