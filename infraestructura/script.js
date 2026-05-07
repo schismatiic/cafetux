@@ -68,17 +68,24 @@ const renderInicio = () => {
   const inicio_container = document.createElement("div");
   const inicio_img = document.createElement("img");
   const inicio_p = document.createElement("p");
+  const boton_catalogo = document.createElement("button");
   //   ===============================================================================================
   //   Classname and styles
   inicio_container.className = "inicio_container";
+  boton_catalogo.className = "boton_catalogo_inicio";
   //   ===============================================================================================
   //   Text content / src
   inicio_img.src =
     "https://larazacoffee.cl/cdn/shop/articles/v60.webp?v=1685481020";
   inicio_p.textContent =
     "Inspirados en la pasión de Momo por el café y las cafeteras, en Cafetux reunimos modelos modernos y funcionales para quienes disfrutan preparar un buen café en casa. Desde la Saeco A-50 hasta la Bialetti que es el típico café napolitano.";
+  boton_catalogo.textContent = "Ver catálogo";
   inicio_container.appendChild(inicio_img);
   inicio_container.appendChild(inicio_p);
+  inicio_container.appendChild(boton_catalogo);
+  boton_catalogo.addEventListener("click", () => {
+    renderCatalogo();
+  });
   content.appendChild(inicio_container);
 };
 const renderCatalogo = () => {
@@ -122,6 +129,25 @@ const renderCatalogo = () => {
     });
   });
 };
+const renderNosotros = () => {
+  content.innerHTML = "";
+  //   ===============================================================================================
+  //   DOM elements
+  const nosotros_container = document.createElement("div");
+  const nosotros_img = document.createElement("img");
+  const nosotros_p = document.createElement("p");
+  //   ===============================================================================================
+  //   Classname and styles
+  nosotros_container.className = "nosotros_container";
+  //   ===============================================================================================
+  //   Text content / src
+  nosotros_img.src = "https://pbs.twimg.com/media/GHT41FmakAA48Pa.jpg";
+  nosotros_p.textContent =
+    "En Cafetux vivimos el café con la misma pasión con la que Momo vive cada directo, ragazzo. Nuestro CEO, el legendario streamer argentino-italiano Momo, creó esta tienda con una misión muy simple: llevar cafeteras elegantes, potentes y con verdadero stile italiano a todos los amantes del café.Desde las clásicas Bialetti hasta máquinas premium seleccionadas personalmente por il capo Momo, cada producto representa tradición, diseño y la experiencia de preparar un café como se debe: intenso, elegante y acompañado de buena conversación. Porque para nosotros el café no es solo una bebida… es un ritual, una experiencia y una forma de vida italiana.";
+  nosotros_container.appendChild(nosotros_img);
+  nosotros_container.appendChild(nosotros_p);
+  content.appendChild(nosotros_container);
+};
 //   ===============================================================================================
 //   Listeners
 botones_nav.forEach((boton) => {
@@ -131,6 +157,8 @@ botones_nav.forEach((boton) => {
       renderInicio();
     } else if (boton.textContent === "Catálogo") {
       renderCatalogo();
+    } else if (boton.textContent === "Sobre nosotros") {
+      renderNosotros();
     }
   });
 });
