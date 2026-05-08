@@ -49,7 +49,7 @@ PRIVATE_SUBNET_ID=$(
 )
 
 echo "Subnet Ids"
-echo "Public: $PUBLIC_SUBNET_IDD"
+echo "Public: $PUBLIC_SUBNET_ID"
 echo "Private: $PRIVATE_SUBNET_ID"
 
 ## Gateways
